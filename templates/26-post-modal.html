@@ -1,0 +1,64 @@
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h2 >Create Post</h2>
+                <button type="button" class="btn-close" (click)="handleClose()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="user-new-modal">
+                    <div class="profile-picture">
+                        <figure class="avatar">
+                            <img 
+                            [src]="profil?.picture ? profil?.picture : '/assets/images/avatar/avatar.png'"
+                            width="50" alt=" "/>
+                        </figure>
+                    </div>
+                    <div class="username-modal">
+                        <div class="username">{{ profil?.user?.fullName }}</div>
+                        <div class="post-visibility">
+                            <select name="" id="">
+                                <option value="">Public</option>
+                                <option value="">Private</option>
+                                <option value="">Friends</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <textarea 
+                    name="" 
+                    id="" 
+                    cols="30" 
+                    rows="5" 
+                    class="p-2"
+                    placeholder="What's on your mind ?"></textarea>
+                </div>
+                <div class="modal-icon flex jcsb aic">
+                    <img src="/assets/images/icon/square-image.png" width="38" alt="">
+                    <i class="smiley smiley-gray-icon"></i>
+                </div>
+                <div class="modal-infos shadow-lg">
+                    <div class="modal-infos-title">
+                        Ajouter une publication
+                    </div>
+                    <div class="modal-infos-icons">
+                        <i class="image-icon"></i>
+                        <i class="friend-icon"></i>
+                        <i class="smiley-icon"></i>
+                        <i class="gps-icon"></i>
+                        <i class="request-icon"></i>
+                        <i class="other-icon"></i>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="modal-footer flex">
+                <button class="btn flex-1 w100 text-white"
+                (click)="handleSave()"
+                >Publish</button>
+            </div>
+
+        </div>
+    </div>
+</div>

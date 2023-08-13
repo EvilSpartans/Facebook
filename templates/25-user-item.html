@@ -1,0 +1,26 @@
+<div class="user-item card w-100 shadow-xss rounded-xxl border-0 ps-4 pt-4 pe-4 pb-3 mb-3" *ngFor="let user of userData">
+    <div class="d-flex gap-2 align-items-center">
+        <div class="profil-picture">
+            <img src="/assets/images/avatar/1.png" alt="user" class="w40 mt--1">
+        </div>
+        <div class="profil-details flex-1 font-xssss fw-600 text-grey-500 card-body p-0 d-flex align-items-center">
+            <div class="user-fullName">
+                <strong>{{user.fullName}}</strong>
+
+            </div>
+            <div class="user-fullName">
+                Friend · Live France
+            </div>
+            <div class="user-fullName">
+                134 mutual  friends 
+            </div>
+        </div>
+        <div class="profil-actions">
+            <button class="btn btn-primary text-white d-flex gap-1 align-items-center">
+                <i class="feather-plus font-md"></i>
+                Add friend
+            </button>
+        </div>
+
+    </div>
+</div>

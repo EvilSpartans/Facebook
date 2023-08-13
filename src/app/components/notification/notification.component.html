@@ -1,0 +1,6 @@
+<div class="alert-container">
+    <div class="alert alert-{{notification.status}}" *ngFor="let notification of notifications" role="alert">
+        {{ notification.message }}
+        <button class="btn-close" (click)="removeNotification(notification)"></button>
+    </div>
+</div>
